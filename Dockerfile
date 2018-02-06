@@ -4,10 +4,7 @@ FROM rocker/shiny:latest
 
 RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
     echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
-    apt-get -qq update && apt-get install --no-install-recommends -y libgdal-dev libproj-dev net-tools procps libcurl4-openssl-dev libxml2-dev libssl-dev openjdk-8-jdk libgeos-dev python-pip && \
-    pip install --upgrade pip && \
-    pip install -U setuptools && \
-    pip install bioblend galaxy-ie-helpers && \
+    apt-get -qq update && apt-get install --no-install-recommends -y libgdal-dev libproj-dev net-tools procps libcurl4-openssl-dev libxml2-dev libssl-dev openjdk-8-jdk libgeos-dev && \
     # Installing R package dedicated to the shniy app
     R CMD javareconf && \
     Rscript -e "install.packages('wallace')" && \
