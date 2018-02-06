@@ -17,7 +17,7 @@ RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
 # Wallace stuff
 ADD ./wallace/inst/ /srv/shiny-server/sample-apps/SIG/wallace/
 
-# Galaxy ie stuff
+# Monitoriring life container
 ADD ./monitor_traffic.sh /monitor_traffic.sh
 
 # Adapt download function to export to history Galaxy
