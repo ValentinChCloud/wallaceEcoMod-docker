@@ -1,3 +1,4 @@
 [submodule "wallace"]
 	path = wallace
 	url = https://github.com/wallaceEcoMod/wallace.git
+	branch= master
