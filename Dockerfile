@@ -25,6 +25,9 @@ COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 # Bash script to lauch all process needed
 COPY shiny-server.sh /usr/bin/shiny-server.sh
 
+
+RUN mkdir /import
+
 # Python script to export data to history Galaxy
 
 CMD ["/usr/bin/shiny-server.sh"]
