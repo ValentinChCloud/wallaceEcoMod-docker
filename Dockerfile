@@ -11,6 +11,8 @@ RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
     # Bash script to check traffic
     mkdir /srv/shiny-server/sample-apps/SIG
 
+# Add maxent module
+RUN wget -P /usr/local/lib/R/site-library/dismo/java -O maxent.jar https://github.com/mrmaxent/Maxent/blob/master/ArchivedReleases/3.3.3e/maxent.jar?raw=true
 # Wallace stuff
 ADD ./wallace/inst/ /srv/shiny-server/sample-apps/SIG/wallace/
 
