@@ -31,7 +31,8 @@ COPY ./shiny-server.conf /etc/shiny-server/shiny-server.conf
 # Bash script to lauch all process needed
 COPY shiny-server.sh /usr/bin/shiny-server.sh
 
-
+RUN apt-get install -y r-cran-rjava
+RUN Rscript -e "install.packages('rJava')"
 RUN mkdir /import
 
 # Python script to export data to history Galaxy
